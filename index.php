@@ -34,10 +34,7 @@
                     <th>User_Id</th>
                     <th>userName</th>
                     <th>FirstName</th>                                
-                    <th>LastName</th>  
-                    <!-- <th>Gender</th>
-                    <th>Password</th>
-                    <th>Status</th> -->
+                    <th>LastName</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -60,25 +57,7 @@
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>  
       
       
-    <script>
-      $(document).ready(function() {
-          $('#tablaUsuarios').DataTable( {
-            "ajax":{
-                "url":"conexionBDD/consulta.php",
-                "dataSrc":""
-            },
-            "columns":[
-                {"data":"user_id"},
-                {"data":"user_name"},
-                {"data":"user_firstname"},
-                {"data":"user_lastname"},
-                // {"data":"user_gerder"},
-                // {"data":"user_password"},
-                // {"data":"user_status"},
-            ]  
-          });
-      });
-    </script>
+    <script src="js/ajax.js"></script>
       
       
   </body>
