@@ -1,20 +1,20 @@
 <?php
 
-include_once 'conexionBDD/conexion.php';
+include_once 'conexion.php';
 
 $objeto=new conexionBDD();
 $conexion=$objeto->conectarBDD();
 
-$consulta="SELECT * FROM clientestienda";
+$consulta="SELECT * FROM listatareas";
 
 $resultado=$conexion->prepare($consulta);
 $resultado->execute();
 
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
 
-print_r($data,JSON_UNESCAPED_UNICODE);
 
-// print_r($data);
+print json_encode($data,JSON_UNESCAPED_UNICODE);
+// echo array('Data'=>$data);
 
 $conexion=null;
 

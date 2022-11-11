@@ -3,7 +3,7 @@
 class conexionBDD{
     public static function conectarBDD(){
         define('servidor','localhost');
-        define('nombre_db','curso_data_tables');
+        define('nombre_db','ximas');
         define('usuario','root');
         define('password','');
 

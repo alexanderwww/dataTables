@@ -1,20 +1,46 @@
-$(document).ready(function(){
-    
+
+function initTable(){
+
     $("#tablaUsuarios").DataTable({
         "ajax":{
             "url":"conexionBDD/consulta.php",
+            'dataSrc': ''
         },
-        "columns":
-        [
-            {"data":"user_id"},
-            {"data":"user_name"},
-            {"data":"user_firstname"},
-            {"data":"user_lastname"},
-            {"data":"user_gerder"},
-            {"data":"user_password"},
-            {"data":"user_status"},
-        ]
+        'columns':[
+            {data:"id"},
+            {data:"name"},
+            {data:"idUser"},
+        ],
+        "initComplete": function() {
+            ocultar();
+        }
+    
 
     })
 
-})
+    
+
+}
+
+
+
+
+initTable();
+
+
+
+$('th').click(function() {
+    $(this).hide();
+
+    let indiceColumna = $(this).parent().children().index(this);
+
+    console.log(indiceColumna )
+    $(`table td:nth-child(2)`).hide();
+});
+
+function ocultar(){
+
+    $('#ocultar').hide()
+    $(`table td:nth-child(2)`).hide();
+
+}
