@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function initTable(){
 
@@ -44,3 +45,4 @@ function ocultar(){
     $(`table td:nth-child(2)`).hide();
 
 }
+
